@@ -1,0 +1,80 @@
+@import "../../assets/scss/partials/variables";
+
+.col-sidebar {
+  width: 18.15%;
+  padding-right: 0;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 22;
+  overflow: hidden;
+}
+
+.sidebar-main {
+  min-height: 100vh;
+  height: 100%;
+  background-color: $tangaroa;
+  padding: 3.2rem 2.4rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  // border-bottom-right-radius: 3rem;
+
+  .logo-brand {
+    margin-top: 5.8rem;
+    padding: 0 1.6rem;
+    h2{
+      color: $orangepeel;
+    }
+  }
+
+  .ul-sidebar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: .2rem;
+
+      a {
+        padding: .8rem 1.6rem;
+        border-radius: 0.8rem;
+        transition: none;
+        cursor: pointer;
+        color: $white;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+          background-color: $orangepeel;
+          color: $tangaroa;
+          font-weight: 700;
+
+          span:before {
+            color: $tangaroa;
+            font-weight: 700;
+          }
+        }
+
+        .icon-chevronleft {
+          display: inline-block;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+
+.sidebar-main::-webkit-scrollbar-thumb {
+  background: $tangaroa;
+  border: 0px none $tangaroa;
+  border-radius: 0;
+  height: 95%;
+
+  &:hover {
+    background: $tangaroa;
+  }
+
+  &:active {
+    background: $tangaroa;
+  }
+}

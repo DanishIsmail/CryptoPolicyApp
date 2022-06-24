@@ -1,0 +1,299 @@
+// auth: sign up
+.careauth-sidebar-outer {
+  background-color: $tangaroa;
+  min-height: 100%;
+  color: $white;
+
+  .careauth-sidebar-inner {
+    max-width: 27.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 9rem 0 0.1rem;
+    color: $white;
+
+    .logo {
+      img {
+        max-width: 21.7rem;
+        width: 100%;
+      }
+      h2{
+        color: $orangepeel;
+      }
+    }
+
+    .auth-welcome-text h2 {
+      color: $white;
+    }
+  }
+}
+
+.authcontent-outer {
+  min-height: 100%;
+  padding: 10.4rem 10rem 1rem 11rem;
+
+  .authcontent-inner {
+    max-width: 55.5rem;
+    width: 100%;
+
+    h5 {
+      color: $nightrider;
+    }
+
+    h3+p,
+    .normal>p {
+      margin-top: 0.8rem;
+    }
+
+    .anchor.a-arrow {
+      span:before {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
+
+    .p5 {
+      span {
+        span {
+          margin-right: 0.8rem;
+          font-size: 2rem;
+          font-weight: normal;
+          position: relative;
+          top: 0.11rem;
+        }
+      }
+    }
+
+    .block-ul {
+      @include custom-ul;
+
+      li {
+        margin-bottom: 1rem;
+
+        span {
+          &:nth-child(1) {
+            font-size: 2.2rem;
+            margin-right: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .upload-boxes {
+      padding: 3.4rem .5rem;
+      min-width: 17.8rem;
+      max-width: 17.8rem;
+      max-height: 14.9rem;
+      border-radius: .4rem;
+      cursor: pointer;
+      background-color: transparent;
+      color: $black;
+      border: .1rem solid #DEE2E6;
+      h5{
+        font-weight: 400;
+      }
+
+      &.upload-box-selected {
+        background-color: $greychateau;
+        color: $white;
+        border: .1rem solid transparent;
+        h5{
+          color: $white;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+
+//main content
+.col-main {
+  width: 81.8%;
+  padding-left: 18.5%;
+}
+
+.main-content {
+  padding: 10rem 4rem 2rem;
+  margin-left: 18.5%;
+  width: calc(100% - 18.5%);
+}
+
+//dashboard
+.row-dashboard {
+  .card {
+    min-height: 40rem;
+  }
+
+  .black-eclipse {
+    position: absolute;
+    top: -.8rem;
+    right: -.9rem;
+    height: 2.1rem;
+    width: 2.1rem;
+    border-radius: 50%;
+    background-color: $orangepeel;
+    border: .2rem solid #F9F9F9;
+  }
+}
+
+.card-dashboard-dark {
+  h5 {
+    color: $white;
+    margin-bottom: .5rem;
+  }
+
+  h2 {
+    color: $orangepeel;
+  }
+}
+
+.card-dashboard-light {
+  h5 {
+
+    margin-bottom: .5rem;
+  }
+
+  h2 {
+    color: $tangaroa;
+  }
+}
+
+.table-cp {
+
+  th:first-child,
+  td:first-child {
+    padding-left: 2rem;
+  }
+
+  th:last-child,
+  td:last-child {
+    text-align: right;
+    padding-right: 2rem;
+  }
+
+  th:last-child{
+    width: 2%;
+  }
+
+  td:last-child{
+    text-align: center;
+  }
+}
+
+//wallet
+.card-type {
+  border: .1rem solid $whitesmoke;
+  border-radius: .4rem;
+  max-width: 35rem;
+  width: 100%;
+  padding: .8rem 2rem;
+  .p4{
+    p{
+      color: $greychateau;
+      margin-top: -.2rem;
+    }
+  }
+  .icon-RightArrow{
+    font-size: 1.8rem;
+    &::before{
+      color: $tangaroa;
+    }
+  }
+}
+
+//claim
+.drag-or-browse {
+  div {
+    img {
+      margin-right: 1.8rem;
+    }
+  }
+  .p5 {
+    padding-left: 2rem;
+  }
+  .p3 {
+    p {
+      &:nth-child(2) {
+        font-size: $tertiary-fs;
+        color: $greychateau;
+        font-weight: normal;
+      }
+    }
+  }
+  &.file-hidden-upload {
+    position: relative;
+  
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+  
+      &:disabled {
+        cursor: default;
+      }
+    }
+  }
+}
+.file-upload {
+  background-color: $whitesmoke;
+  border: 1px solid $whitesmoke;
+  border-radius: 0.4rem;
+  padding: 1.2rem 1.8rem;
+  .icon-Image, img {
+    margin-right: 1rem;
+    height: 2.3rem;
+  }
+  .p5 {
+    span {
+      display: inline-block;
+      max-width: 18.5rem;
+      width: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      top: 0.25rem;
+    }
+  }
+}
+
+.progress {
+  min-width: 13.3rem;
+  background-color: $tangaroa;
+  height: 0.5rem;
+  border-radius: 10rem;
+  .progress-bar {
+    background-color: $orangepeel;
+    border-radius: 10rem;
+  }
+}
+
+//hospital list
+.table-hos{
+  thead{
+    th:last-child{
+      text-align: left;
+    }
+  }
+  tbody{
+    td:last-child{
+      text-align: left;
+    }
+  }
+  
+}
+
+//settings
+.img-account{
+  max-width: 8rem;
+  .edit{
+    position: absolute;
+    bottom: 0rem;
+    right: -.5rem;
+    cursor: pointer;
+  }
+}

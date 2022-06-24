@@ -1,0 +1,38 @@
+$black: #000;
+$navy: #140175;
+$studio: #7B5EA3;
+$nightrider: #2F2F2F;
+$fog: #CCC0DD;
+$silver: #C1C1C1;
+$speechred: #C00000;
+$tangaroa: #022342;
+$orangepeel: #FE9900;
+$white: #fff;
+$dust: rgba(2, 35, 66, 0.05);
+$primarybg: #F3F3F3; 
+$solitude: #E4EBF6;
+$greychateau: #9D9FA2;
+$whitesmoke: #F2F2F2;
+$pattensblue: #D8DCDF;
+
+
+$primary-family: 'Inter', sans-serif;
+
+$primary-fs: 1.6rem;
+$secondary-fs: 1.4rem;
+$tertiary-fs: 1.2rem;
+
+// Media Quries
+$breakpoint-xxxxl: "only screen and (min-width: 3101px)";
+$breakpoint-xxxl: "only screen and (min-width: 2501px) and (max-width: 3100px)";
+$breakpoint-xxl: "only screen and (min-width: 1921px) and (max-width: 2500px)";
+$breakpoint-xl: "only screen and (min-width: 1200px) and (max-width:1440px)";
+$breakpoint-lg: "only screen and (min-width:992px) and (max-width:1199px)";
+$breakpoint-lg-only: "only screen and (min-width:1200px)";
+$breakpoint-lg-max: "only screen and (max-width:1199px)";
+$breakpoint-md-only: "only screen and (max-width:991px)";
+$breakpoint-md: "only screen and (min-width:768px) and (max-width:991px)";
+$breakpoint-sm: "only screen and (min-width:576px) and (max-width:767px)";
+$breakpoint-sm-only: "only screen and (max-width:991px)";
+$breakpoint-xs: "only screen and (max-width:767px)";
+$breakpoint-xxs: "only screen and (max-width: 375px)";

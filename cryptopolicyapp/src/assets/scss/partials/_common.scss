@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+.minvh-h {
+  min-height: 100vh;
+}
+
+.height-content{
+  min-height: calc(100vh - 14rem);
+}
+
+.height-content-sm{
+  min-height: calc(100vh - 24rem);
+}
+
+button, a, span, li, i, input, select, textarea, div{
+    transition: all 0.5s;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 0;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.toRight{
+  text-align: right;
+}
+.clr-night-rider {
+  color: $nightrider;
+}
+.clr-silver {
+  color: $silver;
+}
+.clr-studio {
+  color: $studio;
+}
+.clr-navy {
+  color: $navy;
+}
+.clr-tangaroa{
+  color: $tangaroa;
+}
+.clr-greychateau{
+  color: $greychateau;
+}
+.clr-orangepeel{
+  color: $orangepeel;
+}
+
+.bg-tangaroa{
+  background-color: $tangaroa !important;
+}
+.fs-12 {
+  font-size: 1.2rem !important;
+}
+.fs-25 {
+  font-size: 2.5rem;
+}
+.fs-48{
+  font-size: 4.8rem;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.anchor-link {
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.error {
+  color: $speechred;
+  font-size: 1.2rem;
+}
+
+.no-caret{
+  &.dropdown-toggle::after {
+    display: none;
+  }
+}
+
+.bordered-div {
+  border: 0.1rem solid $pattensblue;
+  border-radius: 0.4rem;
+  padding: 1.6rem 2rem;
+}
+
+@mixin  custom-ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+//widths
+.mw-710{
+  max-width: 71rem;
+  width: 100%;
+}
+.mw-590{
+  max-width: 59rem;
+  width: 100%;
+}
+.mw-450{
+  max-width: 45.2rem;
+  width: 100%;
+}
+.mw-360{
+  max-width: 36rem;
+  width: 100%;
+}
+
+.mr-24{
+  margin-right: 2.4rem;
+}
+.ml-1 {
+margin-left: 0.1rem;
+}
+
+.mr-10 {
+margin-right: 1rem;
+}
+
+.mr-8 {
+margin-right: 0.8rem;
+}
+
+.ml-12 {
+margin-left: 1.2rem;
+}
+
+.ml-10 {
+  margin-left: 1rem;
+  }
+
+// Margins
+.mt--p5{
+  margin-top: -.5rem;
+}
+.mt--1{
+  margin-top: -1rem;
+}
+.mt_1 {
+  margin-top: 0.1rem;
+}
+.mt-8{
+  margin-top: .8rem;
+}
+.mt-16 {
+  margin-top: 1.6rem;
+}
+.mt-18 {
+  margin-top: 1.8rem;
+}
+.mt-20 {
+  margin-top: 2rem;
+}
+.mt-24 {
+  margin-top: 2.4rem;
+}
+.mt-30 {
+  margin-top: 3rem;
+}
+.mt-32 {
+  margin-top: 3.2rem;
+}
+.mt-40 {
+  margin-top: 4rem;
+}
+.mt-50 {
+  margin-top: 5rem;
+}
+.mt-60 {
+  margin-top: 6rem;
+}
+.mt-70 {
+  margin-top: 7rem;
+}
+.mt-80 {
+  margin-top: 8rem;
+}
+.mt-90 {
+  margin-top: 9rem;
+}
+.mt-100 {
+  margin-top: 10rem;
+}
+
+.mb-8 {
+  margin-bottom: 0.8rem;
+}
+.mb-16 {
+  margin-bottom: 1.6rem;
+}
+.mb-18 {
+  margin-bottom: 1.8rem;
+}
+.mb-20 {
+  margin-bottom: 2rem;
+}
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+.mb-30 {
+  margin-bottom: 3rem;
+}
+.mb-32 {
+  margin-bottom: 3.2rem;
+}
+.mb-40 {
+  margin-bottom: 4rem;
+}
+.mb-50 {
+  margin-bottom: 5rem;
+}
+.mb-60 {
+  margin-bottom: 6rem;
+}
+.mb-70 {
+  margin-bottom: 7rem;
+}
+.mb-80 {
+  margin-bottom: 8rem;
+}
+.mb-90 {
+  margin-bottom: 9rem;
+}
+.mb-100 {
+  margin-bottom: 10rem;
+}
+
+.mr-19 {
+  margin-right: 1.9rem;
+}
+.mr-20 {
+  margin-right: 2rem;
+}
+
+// Paddings
+.pt-16 {
+  padding-top: 1.6rem;
+}
+.pt-18 {
+  padding-top: 1.8rem;
+}
+.pt-20 {
+  padding-top: 2rem;
+}
+.pt-24 {
+  padding-top: 2.4rem;
+}
+.pt-30 {
+  padding-top: 3rem;
+}
+.pt-32 {
+  padding-top: 3.2rem;
+}
+.pt-40 {
+  padding-top: 4rem;
+}
+.pt-50 {
+  padding-top: 5rem;
+}
+.pt-60 {
+  padding-top: 6rem;
+}
+.pt-70 {
+  padding-top: 7rem;
+}
+.pt-80 {
+  padding-top: 8rem;
+}
+.pt-90 {
+  padding-top: 9rem;
+}
+.pt-100 {
+  padding-top: 10rem;
+}
+
+.pb-16 {
+  padding-bottom: 1.6rem;
+}
+.pb-18 {
+  padding-bottom: 1.8rem;
+}
+.pb-20 {
+  padding-bottom: 2rem;
+}
+.pb-24 {
+  padding-bottom: 2.4rem;
+}
+.pb-30 {
+  padding-bottom: 3rem;
+}
+.pb-32 {
+  padding-bottom: 3.2rem;
+}
+.pb-40 {
+  padding-bottom: 4rem;
+}
+.pb-50 {
+  padding-bottom: 5rem;
+}
+.pb-60 {
+  padding-bottom: 6rem;
+}
+.pb-70 {
+  padding-bottom: 7rem;
+}
+.pb-80 {
+  padding-bottom: 8rem;
+}
+.pb-90 {
+  padding-bottom: 9rem;
+}
+.pb-100 {
+  padding-bottom: 10rem;
+}
+
+
+.pending-img{
+  max-width: 8rem;
+  width: 100%;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border: 0px none #ffffff;
+  border-radius: 0;
+
+  &:hover {
+    background: #ccc;
+  }
+
+  &:active {
+    background: #ccc;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none transparent;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
