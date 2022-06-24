@@ -17,12 +17,14 @@ import Signin from "./components/auth/Signin";
 import Header from "./components/common/Header";
 import Nav from "./components/common/Nav";
 import Dashboard from "./components/main/Dashboard";
+import ResetPassword from "./components/auth/ResetPassword";
+import ChangePassword from "./components/auth/ChangePassword";
 
 const App = () => {
   const dispatch = useDispatch();
   // const { isLoggedIn } = useSelector((state) => state?.auth);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   useEffect(() => {
     history.listen((location) => {
@@ -46,6 +48,8 @@ const App = () => {
                   <Route exact path={["/", "/signin"]} component={Signin} />
                   <Route exact path={"/signin"} component={Signin} />
                   <Route exact path="/signup" component={Signup} />
+                  <Route exact path="/recover-password" component={ResetPassword} />
+                  <Route exact path="/change-password" component={ChangePassword} />
                   <Redirect to="/signin" />
                 </Switch>
               </div>

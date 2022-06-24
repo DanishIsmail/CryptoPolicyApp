@@ -1,8 +1,12 @@
 import React from "react";
 
-import Clipboard from  '../../assets/images/clipboard.png';
+import TotalPolicies from  '../../assets/images/TotalPolicy.svg';
 
-import InsurancePolicy from "../../assets/images/icons8-insurance-policy-64.png";
+import TotalClaims from  '../../assets/images/TotalClaim.svg';
+
+import PaymentMade from "../../assets/images/PaymentMade.svg";
+
+import RejectedClaim from "../../assets/images/RejectedClaim.svg";
 
 import Chart from "../../assets/images/policies.png";
 
@@ -12,10 +16,10 @@ const Dashboard = () => {
             <section className="main-content">
                 <div className="row">
 
-                    <div className="col-md-3 mb-16">
-                        <div className="card mt-16 bg-tangaroa card-dashboard-dark">
-                            <div className="d-flex align-items-center">
-                                <img src={Clipboard} alt="" />
+                    <div className="col-sm-6 col-md-3 col-lg-6 col-xl-3 mb-16">
+                        <div className="card mt-16 bg-tangaroa card-dashboard-dark h-90">
+                            <div className="d-flex align-items-center h-100">
+                                <img src={TotalPolicies} alt="" />
                                 <div className="ms-5">
                                     <h5>Total Policies</h5>
                                     <h2>12</h2>
@@ -23,10 +27,10 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 mb-16">
-                        <div className="card mt-16">
-                            <div className="d-flex align-items-center card-dashboard-light">
-                                <img src={InsurancePolicy} alt="" />
+                    <div className="col-sm-6 col-md-3 col-lg-6 col-xl-3 mb-16">
+                        <div className="card mt-16 h-90">
+                            <div className="d-flex align-items-center card-dashboard-light h-100">
+                                <img src={TotalClaims} alt="" />
                                 <div className="ms-5">
                                     <h5>Total Claims</h5>
                                     <h2>10</h2>
@@ -34,10 +38,10 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 mb-16">
-                        <div className="card mt-16 bg-tangaroa card-dashboard-dark">
-                            <div className="d-flex align-items-center">
-                                <img src={Clipboard} alt="" />
+                    <div className="col-sm-6 col-md-3 col-lg-6 col-xl-3 mb-16">
+                        <div className="card mt-16 bg-tangaroa card-dashboard-dark h-90">
+                            <div className="d-flex align-items-center h-100">
+                                <img src={PaymentMade} alt="" />
                                 <div className="ms-5">
                                     <h5>Payments Made</h5>
                                     <h2>00</h2>
@@ -45,10 +49,10 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 mb-16">
-                        <div className="card mt-16">
-                            <div className="d-flex align-items-center card-dashboard-light">
-                                <img src={InsurancePolicy} alt="" />
+                    <div className="col-sm-6 col-md-3 col-lg-6 col-xl-3 mb-16 h-90">
+                        <div className="card mt-16 h-90">
+                            <div className="d-flex align-items-center card-dashboard-light h-100">
+                                <img src={RejectedClaim} alt="" />
                                 <div className="ms-5">
                                     <h5>Rejected Claims</h5>
                                     <h2>03</h2>
@@ -61,9 +65,9 @@ const Dashboard = () => {
 
                 <div className="row row-dashboard">
 
-                    <div className="col-md-6 mb-16">
+                    <div className="col-md-6 col-xl-6 col-lg-12 mb-16 d-flex flex-column">
 
-                        <div className="card mt-16">
+                        <div className="card mt-16 flex-grow-1">
                             <div className="row align-items-center">
                                 <div className="col-md-6">
                                     <h3>Buying Pattern</h3>
@@ -77,8 +81,8 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 mb-16">
-                        <div className="card mt-16">
+                    <div className="col-xl-6 col-lg-12 col-md-6 mb-16 d-flex flex-column">
+                        <div className="card mt-16 flex-grow-1">
                             <div className="row align-items-center">
                                 <div className="col-md-8">
                                     <h3>Currently Owned Policies</h3>
