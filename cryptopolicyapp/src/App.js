@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Router, Switch, Route, Redirect } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/assets/plugins/bootstrap/css/bootstrap.min.css";
 import "../src/assets/scss/screen.css";
 import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
-import Home from "./components/Home";
-import Details from "./components/Details";
 
 import AuthSidebar from "./components/auth/AuthSidebar";
 import Signup from "./components/auth/Signup";
@@ -68,7 +64,6 @@ const App = () => {
           </div>
             <Switch>
               <Route exact path={["/", "/dashboard"]} component={Dashboard} />
-              <Route exact path="/details" component={Details} />
               <Redirect to={"/dashboard"} />
             </Switch>
           </div>
