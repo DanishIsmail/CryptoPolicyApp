@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Router, Switch, Route, Redirect } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/assets/plugins/bootstrap/css/bootstrap.min.css";
 import "../src/assets/scss/screen.css";
 import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
-import Home from "./components/Home";
-import Details from "./components/Details";
 
 import AuthSidebar from "./components/auth/AuthSidebar";
 import Signup from "./components/auth/Signup";
@@ -17,12 +13,14 @@ import Signin from "./components/auth/Signin";
 import Header from "./components/common/Header";
 import Nav from "./components/common/Nav";
 import Dashboard from "./components/main/Dashboard";
+import ResetPassword from "./components/auth/ResetPassword";
+import ChangePassword from "./components/auth/ChangePassword";
 
 const App = () => {
   const dispatch = useDispatch();
   // const { isLoggedIn } = useSelector((state) => state?.auth);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   useEffect(() => {
     history.listen((location) => {
@@ -46,6 +44,8 @@ const App = () => {
                   <Route exact path={["/", "/signin"]} component={Signin} />
                   <Route exact path={"/signin"} component={Signin} />
                   <Route exact path="/signup" component={Signup} />
+                  <Route exact path="/recover-password" component={ResetPassword} />
+                  <Route exact path="/change-password" component={ChangePassword} />
                   <Redirect to="/signin" />
                 </Switch>
               </div>
@@ -64,7 +64,6 @@ const App = () => {
           </div>
             <Switch>
               <Route exact path={["/", "/dashboard"]} component={Dashboard} />
-              <Route exact path="/details" component={Details} />
               <Redirect to={"/dashboard"} />
             </Switch>
           </div>

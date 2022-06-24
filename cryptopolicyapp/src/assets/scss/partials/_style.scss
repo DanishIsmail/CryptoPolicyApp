@@ -68,11 +68,14 @@
 
       li {
         margin-bottom: 1rem;
-
+        
         span {
           &:nth-child(1) {
             font-size: 2.2rem;
             margin-right: 1.2rem;
+          }
+          &:nth-child(2){
+            color: $greychateau;
           }
         }
       }
@@ -113,7 +116,7 @@
 }
 
 .main-content {
-  padding: 10rem 4rem 2rem;
+  padding: 10rem 4rem 2rem 2rem;
   margin-left: 18.5%;
   width: calc(100% - 18.5%);
 }
@@ -137,6 +140,9 @@
 }
 
 .card-dashboard-dark {
+  .boxes-content{
+    margin-left: 3rem;
+  }
   h5 {
     color: $white;
     margin-bottom: .5rem;
@@ -148,6 +154,9 @@
 }
 
 .card-dashboard-light {
+  .boxes-content{
+    margin-left: 3rem;
+  }
   h5 {
 
     margin-bottom: .5rem;

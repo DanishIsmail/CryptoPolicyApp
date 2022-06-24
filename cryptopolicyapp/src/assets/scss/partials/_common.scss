@@ -12,6 +12,10 @@
   min-height: calc(100vh - 24rem);
 }
 
+.h-90{
+  height: 90%;
+}
+
 button, a, span, li, i, input, select, textarea, div{
     transition: all 0.5s;
 }

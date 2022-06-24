@@ -146,6 +146,10 @@ html {
   min-height: calc(100vh - 24rem);
 }
 
+.h-90 {
+  height: 90%;
+}
+
 button, a, span, li, i, input, select, textarea, div {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1640,6 +1644,10 @@ h5 {
   margin-right: 1.2rem;
 }
 
+.authcontent-outer .authcontent-inner .block-ul li span:nth-child(2) {
+  color: #9D9FA2;
+}
+
 .authcontent-outer .authcontent-inner .upload-boxes {
   padding: 3.4rem .5rem;
   min-width: 17.8rem;
@@ -1673,7 +1681,7 @@ h5 {
 }
 
 .main-content {
-  padding: 10rem 4rem 2rem;
+  padding: 10rem 4rem 2rem 2rem;
   margin-left: 18.5%;
   width: calc(100% - 18.5%);
 }
@@ -1693,6 +1701,10 @@ h5 {
   border: .2rem solid #F9F9F9;
 }
 
+.card-dashboard-dark .boxes-content {
+  margin-left: 3rem;
+}
+
 .card-dashboard-dark h5 {
   color: #fff;
   margin-bottom: .5rem;
@@ -1700,6 +1712,10 @@ h5 {
 
 .card-dashboard-dark h2 {
   color: #FE9900;
+}
+
+.card-dashboard-light .boxes-content {
+  margin-left: 3rem;
 }
 
 .card-dashboard-light h5 {
@@ -1836,48 +1852,44 @@ h5 {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 375px) {
-  .authcontent-outer .authcontent-inner .file-upload .progress {
-    min-width: 10rem;
-  }
-  .authcontent-outer .authcontent-inner .file-upload .p5 span {
-    max-width: 13rem;
+@media only screen and (min-width: 3101px) {
+  html {
+    font-size: 30px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 2501px) and (max-width: 3100px) {
   html {
-    font-size: 8px;
+    font-size: 20px;
   }
-  .authcontent-outer {
-    padding: 4rem 2rem 3rem 2rem;
+}
+
+@media only screen and (min-width: 1921px) and (max-width: 2500px) {
+  html {
+    font-size: 14px;
   }
-  .authcontent-inner {
-    margin: auto;
+}
+
+@media only screen and (max-width: 1440px) {
+  .col-sidebar {
+    width: 28rem !important;
   }
-  .careauth-sidebar-outer {
-    height: 30rem;
-    overflow-y: scroll;
+  .col-main {
+    width: calc(100% - 28rem);
+    padding-left: 28rem;
   }
-  .careauth-sidebar-outer .careauth-sidebar-inner {
-    padding: 4rem 0 11.5rem;
+  .main-content {
+    width: calc(100% - 28rem);
+    margin-left: 28rem;
   }
-  .mbl-shadow {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 243, 255, 0)), color-stop(65.89%, #f3f3ff));
-    background: linear-gradient(180deg, rgba(243, 243, 255, 0) 0%, #f3f3ff 65.89%);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 11rem;
+  .header-main {
+    width: calc(100% - 28rem) !important;
   }
-  .nav-tabs.mt-60 {
-    margin-top: 4rem;
-  }
-  .btn {
-    padding: 1.1rem 1.5rem;
-  }
-  .btn.mr-24 {
-    margin-right: 1.4rem;
+}
+
+@media only screen and (max-width: 1199px) {
+  .pdr-lg-0 {
+    padding-right: 0;
   }
 }
 
@@ -1993,27 +2005,48 @@ h5 {
   }
 }
 
-@media only screen and (max-width: 1199px) {
-  .pdr-lg-0 {
-    padding-right: 0;
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 8px;
+  }
+  .authcontent-outer {
+    padding: 4rem 2rem 3rem 2rem;
+  }
+  .authcontent-inner {
+    margin: auto;
+  }
+  .careauth-sidebar-outer {
+    height: 30rem;
+    overflow-y: scroll;
+  }
+  .careauth-sidebar-outer .careauth-sidebar-inner {
+    padding: 4rem 0 11.5rem;
+  }
+  .mbl-shadow {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 243, 255, 0)), color-stop(65.89%, #f3f3ff));
+    background: linear-gradient(180deg, rgba(243, 243, 255, 0) 0%, #f3f3ff 65.89%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 11rem;
+  }
+  .nav-tabs.mt-60 {
+    margin-top: 4rem;
+  }
+  .btn {
+    padding: 1.1rem 1.5rem;
+  }
+  .btn.mr-24 {
+    margin-right: 1.4rem;
   }
 }
 
-@media only screen and (min-width: 1921px) and (max-width: 2500px) {
-  html {
-    font-size: 14px;
+@media only screen and (max-width: 375px) {
+  .authcontent-outer .authcontent-inner .file-upload .progress {
+    min-width: 10rem;
   }
-}
-
-@media only screen and (min-width: 2501px) and (max-width: 3100px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 3101px) {
-  html {
-    font-size: 30px;
+  .authcontent-outer .authcontent-inner .file-upload .p5 span {
+    max-width: 13rem;
   }
 }
 /*# sourceMappingURL=screen.css.map */
