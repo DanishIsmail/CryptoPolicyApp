@@ -30,7 +30,7 @@ const Nav = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/wallet"} className="d-flex" activeClassName='active' onClick={() => closeLeftMenu()}>
+                        <NavLink to={"/digital-wallet"} className="d-flex" activeClassName='active' onClick={() => closeLeftMenu()}>
                             <span className="icon-DigitalWallet me-4"></span>
                             <p>Digital Wallet </p>
                         </NavLink>

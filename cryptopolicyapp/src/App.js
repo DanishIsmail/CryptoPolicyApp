@@ -15,12 +15,13 @@ import Nav from "./components/common/Nav";
 import Dashboard from "./components/main/Dashboard";
 import ResetPassword from "./components/auth/ResetPassword";
 import ChangePassword from "./components/auth/ChangePassword";
+import DigitalWallet from "./components/main/DigitalWallet";
 
 const App = () => {
   const dispatch = useDispatch();
   // const { isLoggedIn } = useSelector((state) => state?.auth);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     history.listen((location) => {
@@ -64,6 +65,7 @@ const App = () => {
           </div>
             <Switch>
               <Route exact path={["/", "/dashboard"]} component={Dashboard} />
+              <Route exact path={"/digital-wallet"} component={DigitalWallet} />
               <Redirect to={"/dashboard"} />
             </Switch>
           </div>

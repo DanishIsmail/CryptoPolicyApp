@@ -1766,6 +1766,12 @@ h5 {
   color: #022342;
 }
 
+.transaction-history-box {
+  background-color: rgba(2, 35, 66, 0.05);
+  border-radius: .4rem;
+  padding: 1.6rem;
+}
+
 .drag-or-browse div img {
   margin-right: 1.8rem;
 }
