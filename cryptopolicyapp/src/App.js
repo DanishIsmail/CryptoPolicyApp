@@ -16,6 +16,12 @@ import Dashboard from "./components/main/Dashboard";
 import ResetPassword from "./components/auth/ResetPassword";
 import ChangePassword from "./components/auth/ChangePassword";
 import DigitalWallet from "./components/main/DigitalWallet";
+import PoliciesList from "./components/main/PoliciesList";
+import BoughtPoliciesList from "./components/main/BoughtPoliciesList";
+import PolicyDetails from "./components/main/PolicyDetails";
+import BuyPolicy from "./components/main/BuyPolicy";
+import BuyPolicyReview from "./components/main/BuyPolicyReview";
+import AddPolicy from "./components/main/AddPolicy";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -66,6 +72,12 @@ const App = () => {
             <Switch>
               <Route exact path={["/", "/dashboard"]} component={Dashboard} />
               <Route exact path={"/digital-wallet"} component={DigitalWallet} />
+              <Route exact path={"/policy"} component={PoliciesList} />
+              <Route exact path={"/bought-policies"} component={BoughtPoliciesList} />
+              <Route exact path={"/policy-details"} component={PolicyDetails} />
+              <Route exact path={"/buy-policy"} component={BuyPolicy} />
+              <Route exact path={"/buy-policy-review"} component={BuyPolicyReview} />
+              <Route exact path={"/add-policy"} component={AddPolicy} />
               <Redirect to={"/dashboard"} />
             </Switch>
           </div>

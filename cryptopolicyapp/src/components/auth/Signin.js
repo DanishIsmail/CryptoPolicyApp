@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 const Signin = () => {
     return (
         <div className="authcontent-inner">
@@ -32,15 +34,15 @@ const Signin = () => {
                                         </label>
                                     </div>
                                 </div>
-                                <a href="#" className="anchor a-simple">Forgot Password?</a>
+                                <Link to={"/recover-password"} className="anchor a-simple">Forgot Password?</Link>
                             </div>
                         </div>
                     </div>
                     <div className="mt-20">
                         <button className="btn btn-primary ">Sign In</button>
 
-                        <p className="fs-12 mt-24 clr-nero">Don’t have an account? <a href="#"
-                            className="anchor a-line">Sign Up</a> </p>
+                        <p className="fs-12 mt-24 clr-nero">Don’t have an account? <Link to={"/signup"}
+                            className="anchor a-line">Sign Up</Link> </p>
                     </div>
                 </div>
             </div>

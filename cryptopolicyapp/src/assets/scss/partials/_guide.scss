@@ -221,7 +221,7 @@ h5 {
     .ico {
       position: absolute;
       font-size: 2.4rem;
-      top: 1.1rem;
+      top: 1.15rem;
       left: 1.3rem;
     }
 
@@ -452,13 +452,17 @@ h5 {
 
   &.a-icon,
   &.a-arrow {
-    color: $black;
+    color: $orangepeel;
     display: flex;
     align-items: center;
 
     i,
     span {
       font-size: 2.4rem;
+      margin-right: 0.4rem;
+    }
+    img{
+      width: 2.4rem;
       margin-right: 0.4rem;
     }
   }

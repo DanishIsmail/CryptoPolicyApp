@@ -63,6 +63,12 @@
           transform: rotate(90deg);
 }
 
+.sidebar-main .ul-sidebar .sidebar-hr {
+  border-top: 0.1rem solid #FE9900;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .sidebar-main::-webkit-scrollbar-thumb {
   background: #022342;
   border: 0px none #022342;

@@ -2,9 +2,11 @@ import React from "react";
 
 import "./sidebar.css";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Nav = () => {
+
+    const location = useLocation();
 
     const closeLeftMenu = () => {
         if (document.getElementById("boMenu").classList.contains("bo-menu-overlay")) {
@@ -24,7 +26,7 @@ const Nav = () => {
                 </div>
                 <ul className="ul-sidebar">
                     <li>
-                        <NavLink to={"/dashboard"} className="d-flex" activeClassName='active' onClick={() => closeLeftMenu()}>
+                        <NavLink to={"/dashboard"} className={`d-flex ${location.pathname === '/' ? 'active' : ''}`} activeClassName='active' onClick={() => closeLeftMenu()}>
                             <span className="icon-Dashboard me-4"></span>
                             <p>Dashboard</p>
                         </NavLink>
@@ -36,7 +38,10 @@ const Nav = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/policy"} className="d-flex" activeClassName='active' onClick={() => closeLeftMenu()}>
+                        <NavLink to={"/policy"} className={`d-flex ${location.pathname === '/bought-policies' || 
+                        location.pathname === '/policy-details' || 
+                        location.pathname === '/buy-policy' || 
+                        location.pathname === '/buy-policy-review' ? 'active' : ''}`} activeClassName='active' onClick={() => closeLeftMenu()}>
                             <span className="icon-Policy me-4"></span>
                             <p>Policy</p>
                         </NavLink>
@@ -59,8 +64,9 @@ const Nav = () => {
                             <p>Account Settings</p>
                         </NavLink>
                     </li>
+                    <hr className="sidebar-hr" />
                     <li>
-                        <NavLink to={"/logout"} className="d-flex" activeClassName='active' onClick={() => closeLeftMenu()}>
+                        <NavLink to={"/signin"} className="d-flex" activeClassName='active' onClick={() => closeLeftMenu()}>
                             <span className="icon-LogOut me-4"></span>
                             <p>Logout</p>
                         </NavLink>

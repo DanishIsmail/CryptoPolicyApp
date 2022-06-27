@@ -83,7 +83,7 @@ const SignupIdVerification = () => {
             </div>
 
 
-            <div class="modal fade" id="scanPic" tabindex="-1" aria-labelledby="scanPicLabel" aria-hidden="true">
+            <div class="modal fade" id="scanPic" tabIndex="-1" aria-labelledby="scanPicLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered mw-360">
                     <div class="modal-content">
                         <div class="modal-body">
