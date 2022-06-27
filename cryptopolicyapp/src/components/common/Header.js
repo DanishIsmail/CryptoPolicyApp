@@ -4,9 +4,13 @@ import Notif from "../../assets/images/notif.svg";
 
 import Avatar from "../../assets/images/account_circle.svg";
 
+import { useLocation } from "react-router-dom";
+
 import "./header.css";
 
 const Header = () => {
+
+    const location = useLocation();
 
     const openLeftMenu = () => {
         document.getElementById("boMenu").classList.add("bo-menu-overlay");
@@ -20,13 +24,14 @@ const Header = () => {
             <section className="header-main">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
-                        <h1>Dashboard</h1>
-                        {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button> */}
-
+                        {(location.pathname === '/' || location.pathname === '/dashboard') && <h1>Dashboard</h1>}
+                        {location.pathname === '/digital-wallet' && <h1>Digital Wallet</h1>}
+                        {location.pathname === '/policy' && <h1>Policies List</h1>}
+                        {location.pathname === '/bought-policies' && <h1>Bought Policies</h1>}
+                        {location.pathname === '/buy-policy' && <h1>Buy Policy</h1>}
+                        {location.pathname === '/add-policy' && <h1>Add Policy</h1>}
+                        {location.pathname === '/buy-policy-review' && <h1>Buy Policy Review</h1>}
+                        {location.pathname === '/policy-details' && <h1>Policy Details</h1>}
 
                         <ul className="navbar-nav ms-auto align-items-center">
                             <li>

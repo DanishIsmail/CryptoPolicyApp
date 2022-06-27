@@ -231,6 +231,12 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 1.2rem;
 }
 
+hr {
+  background-color: #9D9FA2;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem;
+}
+
 .no-caret.dropdown-toggle::after {
   display: none;
 }
@@ -832,7 +838,7 @@ h5 {
 .form-group .form-controls .ico {
   position: absolute;
   font-size: 2.4rem;
-  top: 1.1rem;
+  top: 1.15rem;
   left: 1.3rem;
 }
 
@@ -1063,7 +1069,7 @@ h5 {
 }
 
 .anchor.a-icon, .anchor.a-arrow {
-  color: #000;
+  color: #FE9900;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1076,6 +1082,11 @@ h5 {
 .anchor.a-icon span, .anchor.a-arrow i,
 .anchor.a-arrow span {
   font-size: 2.4rem;
+  margin-right: 0.4rem;
+}
+
+.anchor.a-icon img, .anchor.a-arrow img {
+  width: 2.4rem;
   margin-right: 0.4rem;
 }
 
@@ -1598,7 +1609,7 @@ h5 {
 
 .authcontent-outer {
   min-height: 100%;
-  padding: 10.4rem 10rem 1rem 11rem;
+  padding: 9rem 10rem 1rem 11rem;
 }
 
 .authcontent-outer .authcontent-inner {
@@ -1743,6 +1754,14 @@ h5 {
 
 .table-cp td:last-child {
   text-align: center;
+}
+
+.review-policy .anchor {
+  font-weight: 600;
+}
+
+.review-policy .double-weight-text b {
+  font-weight: 600;
 }
 
 .card-type {

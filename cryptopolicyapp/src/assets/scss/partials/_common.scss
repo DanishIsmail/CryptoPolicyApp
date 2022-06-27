@@ -78,6 +78,11 @@ h1, h2, h3, h4, h5, h6, p{
   color: $speechred;
   font-size: 1.2rem;
 }
+hr{
+  background-color: $greychateau;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem;
+}
 
 .no-caret{
   &.dropdown-toggle::after {

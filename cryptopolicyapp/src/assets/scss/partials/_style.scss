@@ -29,7 +29,7 @@
 
 .authcontent-outer {
   min-height: 100%;
-  padding: 10.4rem 10rem 1rem 11rem;
+  padding: 9rem 10rem 1rem 11rem;
 
   .authcontent-inner {
     max-width: 55.5rem;
@@ -186,6 +186,18 @@
 
   td:last-child{
     text-align: center;
+  }
+}
+
+//policy
+.review-policy{
+  .anchor{
+    font-weight: 600;
+  }
+  .double-weight-text{
+    b{
+      font-weight: 600;
+    }
   }
 }
 

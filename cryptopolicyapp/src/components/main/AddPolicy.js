@@ -1,0 +1,97 @@
+import React, { useState } from "react";
+
+import { history } from "../../helpers/history";
+
+import ModelPopup from "../../helpers/ModelPopup";
+
+import Success from "../../assets/images/Checked.png";
+
+const AddPolicy = () => {
+
+    const [showAddSuccess, setShowAddSuccess] = useState(false);
+
+    return (
+        <>
+            <section className="main-content">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="card mt-16 height-content">
+                            <h3>Enter Details to Add New Policy</h3>
+                            <div className="row mt-16">
+                                <div className="col-md-9 col-xl-5">
+                                    <div className="row">
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <label>Policy Name*</label>
+                                                <div className="form-controls">
+                                                    <input type="text" className="form-control" placeholder="Health Premium" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <label>Plan A*</label>
+                                                <div className="form-controls">
+                                                    <input type="text" className="form-control" placeholder="0000" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <label>Plan B*</label>
+                                                <div className="form-controls">
+                                                    <input type="text" className="form-control" placeholder="0000" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div className="col-md-12 mt-40">
+                                    <button className="btn btn-text mr-24" onClick={() => history.push("/policy")}>Back</button>
+                                    <button className="btn btn-primary" onClick={() => setShowAddSuccess(true)}>Add Policy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* buy policy success */}
+            <ModelPopup
+                key={1}
+                show={showAddSuccess}
+                onHide={() => setShowAddSuccess(false)}
+                modelheading={""}
+                showheader={"false"}
+                className="modal fade"
+                dialogClassName="modal-dialog modal-dialog-centered mw-450"
+                backdrop="static"
+                keyboard={false}
+                modelbody={[
+                    <>
+                        <div className="text-center">
+                            <h1>Add Policy!</h1>
+                            <img className="pending-img mt-32 mb-24" src={Success} alt="" />
+
+                            <h2 className="clr-orangepeel">Successful</h2>
+
+                            <div className="mt-8">
+                                <p className="clr-greychateau">
+                                    New policy has been added successfully.
+                                </p>
+                            </div>
+                        </div>
+                    </>,
+                ]}
+            />
+        </>
+    )
+}
+
+export default AddPolicy;
