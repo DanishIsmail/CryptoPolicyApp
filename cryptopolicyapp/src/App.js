@@ -23,6 +23,9 @@ import BuyPolicy from "./components/main/BuyPolicy";
 import BuyPolicyReview from "./components/main/BuyPolicyReview";
 import AddPolicy from "./components/main/AddPolicy";
 import DocumentClaim from "./components/main/DocumentClaim";
+import HospitalList from "./components/main/HospitalList";
+import AddHospital from "./components/main/AddHospital";
+import HospitalDetails from "./components/main/HospitalDetails";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -80,6 +83,9 @@ const App = () => {
               <Route exact path={"/buy-policy-review"} component={BuyPolicyReview} />
               <Route exact path={"/add-policy"} component={AddPolicy} />
               <Route exact path={"/document-claim"} component={DocumentClaim} />
+              <Route exact path={"/hospitals"} component={HospitalList} />
+              <Route exact path={"/add-hospital"} component={AddHospital} />
+              <Route exact path={"/hospital-details"} component={HospitalDetails} />
               <Redirect to={"/dashboard"} />
             </Switch>
           </div>

@@ -43,10 +43,15 @@ const Header = () => {
                         {location.pathname === '/buy-policy-review' && <h1>Buy Policy Review</h1>}
                         {location.pathname === '/policy-details' && <h1>Policy Details</h1>}
                         {location.pathname === '/document-claim' && <h1>Document Claim</h1>}
+                        {location.pathname === '/hospitals' && <h1>Hospitals List</h1>}
+                        {location.pathname === '/add-hospital' && <h1>Add Hospital</h1>}
+                        {location.pathname === '/hospital-details' && <h1>Hospital Details</h1>}
+
 
                         <ul className="navbar-nav ms-auto align-items-center">
                             <li>
                                 <button className="btn btn-text mr-24">Connect Wallet</button>
+                                {/* <button className="btn btn-text mr-24">Connected: 0xa473a5eddc3440db</button> */}
                             </li>
                             <li className="nav-item">
                                 <div className="dropdown">

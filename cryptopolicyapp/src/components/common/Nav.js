@@ -53,7 +53,7 @@ const Nav = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/hospitals"} className="d-flex" activeClassName='active' onClick={() => closeLeftMenu()}>
+                        <NavLink to={"/hospitals"} className={`d-flex ${location.pathname === '/add-hospital' || location.pathname === '/hospital-details' ? 'active' : ''}`} activeClassName='active' onClick={() => closeLeftMenu()}>
                             <span className="icon-HospitalList me-4"></span>
                             <p>Hospitals List</p>
                         </NavLink>

@@ -80,7 +80,7 @@ const PoliciesList = () => {
                                             </div>
 
                                             {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
+                                            <div className="dropdown drop-general">
                                                 <a className="dropdown-toggle no-caret" type="button" id="dropMore"
                                                     data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                                     aria-expanded="false">
@@ -89,13 +89,13 @@ const PoliciesList = () => {
                                                 <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
                                                     aria-labelledby="dropMore">
                                                     <li>
-                                                        <Link onClick={() => setShowEdit(true)}>Edit</Link>
+                                                        <a onClick={() => setShowEdit(true)}>Edit</a>
                                                     </li>
                                                     <li>
                                                         <Link to={"/policy-details"}>View</Link>
                                                     </li>
                                                     <li>
-                                                        <Link onClick={() => setShowDelete(true)}>Delete</Link>
+                                                        <a onClick={() => setShowDelete(true)}>Delete</a>
                                                     </li>
                                                 </ul>
                                             </div>
