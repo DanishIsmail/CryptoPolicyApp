@@ -2,6 +2,8 @@ import React from "react";
 
 import { history } from "../../helpers/history";
 
+import Tooltip from "../../helpers/Tooltip";
+
 const BuyPolicy = () => {
 
     const gotoReview = () => {
@@ -80,11 +82,13 @@ const BuyPolicy = () => {
                                             <div className="form-group">
                                                 <label>Select Amount*</label>
                                                 <div className="form-controls">
-                                                    <select>
+                                                    <select data-tip
+                                                        data-for={'AmountTip'} data-type="light" data-effect="solid" data-place="top" data-offset="{'right': 65}">
                                                         <option>Select</option>
                                                         <option>1000</option>
                                                         <option>2000</option>
                                                     </select>
+                                                    <Tooltip className="custom-tooltip-ra" showInitial={true} id={'AmountTip'}><span>Max Amount: 10,000</span></Tooltip>
                                                 </div>
                                             </div>
                                         </div>

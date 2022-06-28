@@ -22,6 +22,7 @@ import PolicyDetails from "./components/main/PolicyDetails";
 import BuyPolicy from "./components/main/BuyPolicy";
 import BuyPolicyReview from "./components/main/BuyPolicyReview";
 import AddPolicy from "./components/main/AddPolicy";
+import DocumentClaim from "./components/main/DocumentClaim";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -78,6 +79,7 @@ const App = () => {
               <Route exact path={"/buy-policy"} component={BuyPolicy} />
               <Route exact path={"/buy-policy-review"} component={BuyPolicyReview} />
               <Route exact path={"/add-policy"} component={AddPolicy} />
+              <Route exact path={"/document-claim"} component={DocumentClaim} />
               <Redirect to={"/dashboard"} />
             </Switch>
           </div>

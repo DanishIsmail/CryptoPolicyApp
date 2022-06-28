@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Notif from "../../assets/images/notif.svg";
 
@@ -12,6 +12,8 @@ const Header = () => {
 
     const location = useLocation();
 
+    const [scroll, setScroll] = useState(false);
+
     const openLeftMenu = () => {
         document.getElementById("boMenu").classList.add("bo-menu-overlay");
         document.getElementById("leftNav").style.cssText =
@@ -19,9 +21,17 @@ const Header = () => {
         document.getElementById("body").style = "overflow: hidden";
     }
 
+    useEffect(() => {
+
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 40);
+        });
+
+    });
+
     return (
         <>
-            <section className="header-main">
+            <section className={`header-main ${scroll ? 'box-shadow-header' : ''}` }>
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         {(location.pathname === '/' || location.pathname === '/dashboard') && <h1>Dashboard</h1>}
@@ -32,6 +42,7 @@ const Header = () => {
                         {location.pathname === '/add-policy' && <h1>Add Policy</h1>}
                         {location.pathname === '/buy-policy-review' && <h1>Buy Policy Review</h1>}
                         {location.pathname === '/policy-details' && <h1>Policy Details</h1>}
+                        {location.pathname === '/document-claim' && <h1>Document Claim</h1>}
 
                         <ul className="navbar-nav ms-auto align-items-center">
                             <li>
