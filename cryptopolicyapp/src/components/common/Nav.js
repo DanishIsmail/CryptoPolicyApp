@@ -41,7 +41,7 @@ const Nav = () => {
                         <NavLink to={"/policy"} className={`d-flex ${location.pathname === '/bought-policies' || 
                         location.pathname === '/policy-details' || 
                         location.pathname === '/buy-policy' || 
-                        location.pathname === '/buy-policy-review' ? 'active' : ''}`} activeClassName='active' onClick={() => closeLeftMenu()}>
+                        location.pathname === '/buy-policy-review' || location.pathname === '/add-policy' ? 'active' : ''}`} activeClassName='active' onClick={() => closeLeftMenu()}>
                             <span className="icon-Policy me-4"></span>
                             <p>Policy</p>
                         </NavLink>

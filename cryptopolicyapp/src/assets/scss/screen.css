@@ -1858,6 +1858,75 @@ h5 {
   border-radius: 10rem;
 }
 
+.custom-tooltip-ra {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 0.8rem !important;
+  -webkit-box-shadow: 0rem 0.4rem 2.3rem rgba(30, 36, 73, 0.12);
+          box-shadow: 0rem 0.4rem 2.3rem rgba(30, 36, 73, 0.12);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.custom-tooltip-ra.show {
+  opacity: 1 !important;
+}
+
+.custom-tooltip-ra::after {
+  border: 0.75rem solid transparent;
+  border-top: none !important;
+  border-bottom-color: #fff;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  border-radius: 0.3rem;
+  left: 85% !important;
+}
+
+.custom-tooltip-ra::before {
+  display: none;
+}
+
+.custom-tooltip-ra h6 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.custom-tooltip-ra a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #022342 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.custom-tooltip-ra a span {
+  margin-left: 1.2rem;
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  font-size: 1.8rem;
+}
+
+.custom-tooltip-ra .tooltip-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-tooltip-ra .tooltip-ul li {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.2rem;
+  color: #9D9FA2;
+}
+
 .table-hos thead th:last-child {
   text-align: left;
 }

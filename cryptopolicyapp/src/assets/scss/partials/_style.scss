@@ -299,6 +299,62 @@
   }
 }
 
+.custom-tooltip-ra {
+  // position: absolute;
+  // bottom: 2.2rem;
+  // top: auto;
+  // left: .5rem;
+  background-color: $white;
+  border-radius: 0.4rem;
+  padding: 0.8rem !important;
+  box-shadow: 0rem 0.4rem 2.3rem rgba(30, 36, 73, 0.12);
+  width: max-content;
+  &.show{
+    opacity: 1 !important;
+  }
+  &::after {
+    border: 0.75rem solid transparent;
+    border-top: none !important;
+    border-bottom-color: #fff;
+    transform: rotate(180deg);
+    border-radius: 0.3rem;
+    left: 85% !important;
+  }
+  &::before{
+    display: none;
+  }
+  h6{
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  a {
+    font-size: $tertiary-fs;
+    font-weight: bold;
+    text-decoration: none;
+    color: $tangaroa !important;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span {
+      margin-left: 1.2rem;
+      display: inline-block;
+      transform: rotate(180deg);
+      font-size: 1.8rem;
+    }
+  }
+  .tooltip-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      text-transform: uppercase;
+      display: block;
+      font-size: $tertiary-fs;
+      color: $greychateau;
+    }
+  }
+}
+
 //hospital list
 .table-hos{
   thead{

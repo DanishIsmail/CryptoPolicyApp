@@ -1,8 +1,8 @@
 import React from "react";
 
-import TotalPolicies from  '../../assets/images/TotalPolicy.svg';
+import TotalPolicies from '../../assets/images/TotalPolicy.svg';
 
-import TotalClaims from  '../../assets/images/TotalClaim.svg';
+import TotalClaims from '../../assets/images/TotalClaim.svg';
 
 import PaymentMade from "../../assets/images/PaymentMade.svg";
 
@@ -10,7 +10,18 @@ import RejectedClaim from "../../assets/images/RejectedClaim.svg";
 
 import Chart from "../../assets/images/policies.png";
 
+import { history } from "../../helpers/history";
+
 const Dashboard = () => {
+
+    const gotoClaim = () => {
+        history.push("/document-claim");
+    }
+
+    const gotoPolicy = () => {
+        history.push("/policy");
+    }
+
     return (
         <>
             <section className="main-content">
@@ -73,7 +84,7 @@ const Dashboard = () => {
                                     <h3>Buying Pattern</h3>
                                 </div>
                                 <div className="col-md-6 toRight">
-                                    <button className="btn btn-primary btn-sm"><span>+</span>&nbsp;New Claim</button>
+                                    <button className="btn btn-primary btn-sm" onClick={gotoClaim}><span>+</span>&nbsp;New Claim</button>
                                 </div>
                             </div>
                             <div className="mt-40">
@@ -85,10 +96,10 @@ const Dashboard = () => {
                         <div className="card mt-16 flex-grow-1">
                             <div className="row align-items-center">
                                 <div className="col-md-8">
-                                    <h3>Currently Owned Policies</h3>
+                                    <h3>Owned Policies</h3>
                                 </div>
                                 <div className="col-md-4 toRight">
-                                    <button className="btn btn-primary btn-sm">View All<span
+                                    <button className="btn btn-primary btn-sm" onClick={gotoPolicy}>View All<span
                                         className="icon-RightArrow"></span></button>
                                 </div>
                             </div>
