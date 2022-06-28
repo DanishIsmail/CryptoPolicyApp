@@ -1927,12 +1927,8 @@ h5 {
   color: #9D9FA2;
 }
 
-.table-hos thead th:last-child {
-  text-align: left;
-}
-
-.table-hos tbody td:last-child {
-  text-align: left;
+.table-hos .a-line {
+  color: #022342;
 }
 
 .img-account {

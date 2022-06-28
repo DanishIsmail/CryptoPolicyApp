@@ -357,17 +357,9 @@
 
 //hospital list
 .table-hos{
-  thead{
-    th:last-child{
-      text-align: left;
-    }
+  .a-line{
+    color: $tangaroa;
   }
-  tbody{
-    td:last-child{
-      text-align: left;
-    }
-  }
-  
 }
 
 //settings
