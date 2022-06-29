@@ -1,11 +1,12 @@
 import React from "react";
 
+import Logo from "../../assets/images/logo.png";
+
 const AuthSidebarSimple = () => {
     return (
         <>
             <div className="logo">
-                <h2>LOGO</h2>
-                {/* <img src="../../../../assets/images/Logo.svg" />  */}
+                <img src={Logo} /> 
             </div>
             <div className="auth-welcome-text">
                 <h2 className="pt-100">

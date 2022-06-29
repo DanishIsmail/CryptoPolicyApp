@@ -4,6 +4,8 @@ import "./sidebar.css";
 
 import { NavLink, useLocation } from "react-router-dom";
 
+import Logo from "../../assets/images/logo.png";
+
 const Nav = () => {
 
     const location = useLocation();
@@ -21,8 +23,8 @@ const Nav = () => {
         <>
             <div className="sidebar-main" id="leftNav">
                 <div className="logo-brand d-flex align-items-center mb-20">
-                    {/* <img className="me-4" src="../../../../assets/images/Logo.png" alt="" /> */}
-                        <h2 className="text-uppercase">LOGO</h2>
+                    <img className="me-4" src={Logo} alt="" />
+                        {/* <h2 className="text-uppercase">LOGO</h2> */}
                 </div>
                 <ul className="ul-sidebar">
                     <li>

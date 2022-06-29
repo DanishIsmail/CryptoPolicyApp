@@ -23,7 +23,7 @@ const PoliciesList = () => {
         <>
             <section className="main-content">
                 <div className="row align-items-center">
-                    <div className="col-md-6">
+                    <div className="col-sm-6">
                         <div className="form-group">
                             <label>Search Policy</label>
                             <div className="form-controls">
@@ -34,542 +34,544 @@ const PoliciesList = () => {
                     </div>
 
                     {/* show in admins case  */}
-                    <div className="col-md-6 toRight">
+                    <div className="col-sm-6 toRight mb-5 mb-sm-0">
                         <button className="btn btn-primary" onClick={gotoAddPolicy}>Add New Policy</button>
                     </div>
                     <div className="col-12">
                         {/* first screen  */}
                         <div className="card p-0">
-                            <table className="table in-table">
-                                <thead>
-                                    <tr>
-                                        <th>Sr.No.</th>
-                                        <th>Policy Name</th>
-                                        <th>Plan A</th>
-                                        <th>Plan B</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Accidental Death &amp; Parmanent Disability</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                            <div className="table-wrap">
+                                <table className="table in-table table-po">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr.No.</th>
+                                            <th>Policy Name</th>
+                                            <th>Plan A</th>
+                                            <th>Plan B</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Accidental Death &amp; Parmanent Disability</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <Link to={"/bought-policies"}>View Bought Policies</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to={"/policy-details"}>View Details</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to={"/buy-policy"}>Buy Policy</Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <Link to={"/bought-policies"}>View Bought Policies</Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link to={"/policy-details"}>View Details</Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link to={"/buy-policy"}>Buy Policy</Link>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a onClick={() => setShowEdit(true)}>Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <Link to={"/policy-details"}>View</Link>
-                                                    </li>
-                                                    <li>
-                                                        <a onClick={() => setShowDelete(true)}>Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a onClick={() => setShowEdit(true)}>Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <Link to={"/policy-details"}>View</Link>
+                                                        </li>
+                                                        <li>
+                                                            <a onClick={() => setShowDelete(true)}>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Medical expenses and Hospitalization</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Medical expenses and Hospitalization</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Transport or repartition in case of
-                                            illness and injury</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Transport or repartition in case of
+                                                illness and injury</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Emergency Dental Care</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Emergency Dental Care</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Repatriation of family member travelling
-                                            with the insured</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Repatriation of family member travelling
+                                                with the insured</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Return of Dependent Children</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Return of Dependent Children</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Return of Dependent Children</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Return of Dependent Children</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Return of Dependent Children</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Return of Dependent Children</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>Return of Dependent Children</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Return of Dependent Children</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Return of Dependent Children</td>
-                                        <td>300,000</td>
-                                        <td>500,000</td>
-                                        <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Return of Dependent Children</td>
+                                            <td>300,000</td>
+                                            <td>500,000</td>
+                                            <td>
 
-                                            {/* in case of user */}
-                                            <div className="dropdown drop-general">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">View Bought Policies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Buy Policy</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of user */}
+                                                <div className="dropdown drop-general">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">View Bought Policies</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View Details</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Buy Policy</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            {/* in case of admin */}
-                                            <div className="dropdown drop-general d-none">
-                                                <a className="dropdown-toggle no-caret" type="button" id="dropMore"
-                                                    data-bs-toggle="dropdown" data-bs-auto-close="false"
-                                                    aria-expanded="false">
-                                                    <span className="icon-MoreVertical"></span>
-                                                </a>
-                                                <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
-                                                    aria-labelledby="dropMore">
-                                                    <li>
-                                                        <a href="">Edit</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Delete</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                {/* in case of admin */}
+                                                <div className="dropdown drop-general d-none">
+                                                    <a className="dropdown-toggle no-caret" type="button" id="dropMore"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="false"
+                                                        aria-expanded="false">
+                                                        <span className="icon-MoreVertical"></span>
+                                                    </a>
+                                                    <ul className="dropdown-menu drop-more dropdown-menu-lg-end"
+                                                        aria-labelledby="dropMore">
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="row align-items-center">
+                <div className="row align-items-center mt-32">
                     <div className="col-md-12">
                         <div className="form-group mt-24 d-none">
                             <div className="load-more load-more-text d-flex align-items-center justify-content-center">
@@ -586,11 +588,11 @@ const PoliciesList = () => {
                         </div>
                     </div>
 
-                    <div className="col-md-6 p4">
+                    <div className="col-sm-6 p4">
                         <p className="mb-0">Showing <b>1</b> to <b>10</b> of <b>57</b> entries</p>
                     </div>
-                    <div className="col-md-6">
-                        <div className="pagination-wrap mt-32">
+                    <div className="col-sm-6">
+                        <div className="pagination-wrap">
                             <nav>
                                 <ul className="pagination justify-content-end">
                                     <li className="page-item">

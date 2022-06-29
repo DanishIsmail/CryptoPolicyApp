@@ -1,6 +1,13 @@
 import React from "react";
 
+import { history } from "../../helpers/history";
+
 const DigitalWalletStep1 = () => {
+
+    const gotoPaymentStep = () => {
+        history.push("/digital-wallet-payment");
+    }
+
     return (
         <>
             <div className="card mt-16 height-content">
@@ -11,7 +18,7 @@ const DigitalWalletStep1 = () => {
                     </p>
                 </div>
                 <div className="mt-40">
-                    <button className="btn btn-primary">Connect Wallet</button>
+                    <button className="btn btn-primary" onClick={gotoPaymentStep}>Connect Wallet</button>
                 </div>
             </div>
         </>

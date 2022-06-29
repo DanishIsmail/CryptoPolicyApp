@@ -26,6 +26,8 @@ import DocumentClaim from "./components/main/DocumentClaim";
 import HospitalList from "./components/main/HospitalList";
 import AddHospital from "./components/main/AddHospital";
 import HospitalDetails from "./components/main/HospitalDetails";
+import AccountSettings from "./components/main/AccountSettings";
+import DigitalWalletPaymentStep from "./components/main/DigitalWalletPaymentStep";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -76,6 +78,7 @@ const App = () => {
             <Switch>
               <Route exact path={["/", "/dashboard"]} component={Dashboard} />
               <Route exact path={"/digital-wallet"} component={DigitalWallet} />
+              <Route exact path={"/digital-wallet-payment"} component={DigitalWalletPaymentStep} />
               <Route exact path={"/policy"} component={PoliciesList} />
               <Route exact path={"/bought-policies"} component={BoughtPoliciesList} />
               <Route exact path={"/policy-details"} component={PolicyDetails} />
@@ -86,6 +89,7 @@ const App = () => {
               <Route exact path={"/hospitals"} component={HospitalList} />
               <Route exact path={"/add-hospital"} component={AddHospital} />
               <Route exact path={"/hospital-details"} component={HospitalDetails} />
+              <Route exact path={"/settings"} component={AccountSettings} />
               <Redirect to={"/dashboard"} />
             </Switch>
           </div>
