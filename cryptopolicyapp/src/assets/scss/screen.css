@@ -1691,6 +1691,10 @@ h5 {
   font-weight: 600;
 }
 
+.logo img {
+  width: 20rem;
+}
+
 .col-main {
   width: 81.8%;
   padding-left: 18.5%;
@@ -1740,6 +1744,10 @@ h5 {
 
 .card-dashboard-light h2 {
   color: #022342;
+}
+
+.card-dashboard-dark img, .card-dashboard-light img {
+  width: 6.4rem;
 }
 
 .table-cp th:first-child,

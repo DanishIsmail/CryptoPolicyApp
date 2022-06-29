@@ -15,12 +15,12 @@ const DigitalWallet = () => {
                         <DigitalWalletStep1 />
 
                         {/* second screen */}
-                        <DigitalWalletPaymentStep />
+                        {/* <DigitalWalletPaymentStep /> */}
 
-                        {/* third screen */}
+                        {/* {/* third screen * */}
                         <DigitalWalletDetails />
 
-                        {/* fourth screen */}
+                        {/* {/* fourth screen * */}
                         <DigitalWalletSummary />
                         
                     </div>

@@ -27,12 +27,13 @@ import HospitalList from "./components/main/HospitalList";
 import AddHospital from "./components/main/AddHospital";
 import HospitalDetails from "./components/main/HospitalDetails";
 import AccountSettings from "./components/main/AccountSettings";
+import DigitalWalletPaymentStep from "./components/main/DigitalWalletPaymentStep";
 
 const App = () => {
   const dispatch = useDispatch();
   // const { isLoggedIn } = useSelector((state) => state?.auth);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     history.listen((location) => {
@@ -77,6 +78,7 @@ const App = () => {
             <Switch>
               <Route exact path={["/", "/dashboard"]} component={Dashboard} />
               <Route exact path={"/digital-wallet"} component={DigitalWallet} />
+              <Route exact path={"/digital-wallet-payment"} component={DigitalWalletPaymentStep} />
               <Route exact path={"/policy"} component={PoliciesList} />
               <Route exact path={"/bought-policies"} component={BoughtPoliciesList} />
               <Route exact path={"/policy-details"} component={PolicyDetails} />

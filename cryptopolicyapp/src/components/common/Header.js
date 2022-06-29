@@ -41,7 +41,7 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         {(location.pathname === '/' || location.pathname === '/dashboard') && <h1>Dashboard</h1>}
-                        {location.pathname === '/digital-wallet' && <h1>Digital Wallet</h1>}
+                        {(location.pathname === '/digital-wallet' || location.pathname === '/digital-wallet-payment') && <h1>Digital Wallet</h1>}
                         {location.pathname === '/policy' && <h1>Policies List</h1>}
                         {location.pathname === '/bought-policies' && <h1>Bought Policies</h1>}
                         {location.pathname === '/buy-policy' && <h1>Buy Policy</h1>}

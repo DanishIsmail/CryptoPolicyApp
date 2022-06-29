@@ -107,6 +107,11 @@
     }
   }
 }
+.logo{
+  img{
+    width: 20rem;
+  }
+}
 
 
 //main content
@@ -164,6 +169,12 @@
 
   h2 {
     color: $tangaroa;
+  }
+}
+
+.card-dashboard-dark, .card-dashboard-light{
+  img{
+    width: 6.4rem;
   }
 }
 
@@ -300,10 +311,6 @@
 }
 
 .custom-tooltip-ra {
-  // position: absolute;
-  // bottom: 2.2rem;
-  // top: auto;
-  // left: .5rem;
   background-color: $white;
   border-radius: 0.4rem;
   padding: 0.8rem !important;
