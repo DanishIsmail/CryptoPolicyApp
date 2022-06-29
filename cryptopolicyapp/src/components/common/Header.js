@@ -6,6 +6,8 @@ import Avatar from "../../assets/images/account_circle.svg";
 
 import { useLocation } from "react-router-dom";
 
+import { history } from "../../helpers/history";
+
 import "./header.css";
 
 const Header = () => {
@@ -29,6 +31,10 @@ const Header = () => {
 
     });
 
+    const gotoSettings = () => {
+        history.push("/settings");
+    }
+
     return (
         <>
             <section className={`header-main ${scroll ? 'box-shadow-header' : ''}` }>
@@ -46,12 +52,12 @@ const Header = () => {
                         {location.pathname === '/hospitals' && <h1>Hospitals List</h1>}
                         {location.pathname === '/add-hospital' && <h1>Add Hospital</h1>}
                         {location.pathname === '/hospital-details' && <h1>Hospital Details</h1>}
-
+                        {location.pathname === '/settings' && <h1>Account Settings</h1>}
 
                         <ul className="navbar-nav ms-auto align-items-center">
                             <li>
-                                <button className="btn btn-text mr-24">Connect Wallet</button>
-                                {/* <button className="btn btn-text mr-24">Connected: 0xa473a5eddc3440db</button> */}
+                                {/* <button className="btn btn-text mr-24 d-none d-sm-inline-block">Connect Wallet</button> */}
+                                <button className="btn btn-text mr-24 d-none d-sm-inline-block">Connected: 0xa473a5eddc3440db</button>
                             </li>
                             <li className="nav-item">
                                 <div className="dropdown">
@@ -148,7 +154,7 @@ const Header = () => {
                                                 <p>User</p>
                                             </div>
                                             <div className="mt-16">
-                                                <button className="btn btn-primary">Edit Profile</button>
+                                                <button className="btn btn-primary" onClick={gotoSettings}>Edit Profile</button>
                                             </div>
                                         </li>
                                     </ul>

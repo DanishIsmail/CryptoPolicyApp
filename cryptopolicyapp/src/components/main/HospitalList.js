@@ -37,6 +37,7 @@ const HospitalList = () => {
                     <div className="col-12">
                         {/* <!-- first screen  */}
                         <div className="card p-0">
+                            <div className="table-wrap">
                             <table className="table in-table table-hos">
                                 <thead>
                                     <tr>
@@ -232,6 +233,8 @@ const HospitalList = () => {
                                     </tr>
                                 </tbody>
                             </table>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

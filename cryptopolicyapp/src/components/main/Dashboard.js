@@ -104,7 +104,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             {/* <div className="black-eclipse"></div>  */}
-                            <div className="table-wrapper mt-32">
+                            <div className="table-wrap mt-32">
                                 <table className="table in-table table-cp">
 
                                     <thead className="table-light">

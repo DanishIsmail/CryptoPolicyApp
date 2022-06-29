@@ -1,11 +1,12 @@
 import React from "react";
 
+import Logo from "../../assets/images/logo.png";
+
 const AuthSidebarSteps = () => {
     return (
         <>
             <div className="logo">
-                <h2>LOGO</h2>
-                {/* <img src="../../../assets/images/logo-dummy.png" /> */}
+                <img src={Logo} />
             </div>
             <ul className="nav nav-tabs mt-60" id="vertical-tabs" role="tablist">
                 {/* completed  */}
